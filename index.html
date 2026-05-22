@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map Explorer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Map Explorer（半径10m可視化）</h1>
+      <p>
+        到達済みエリアは明るく表示され、未到達エリアは黒く表示されます。地図要素（道路・建物）は白で描画されています。
+      </p>
+      <div class="controls">
+        <button id="startBtn">現在地トラッキング開始</button>
+        <button id="demoBtn">デモ軌跡を再生</button>
+        <button id="resetBtn">リセット</button>
+      </div>
+      <canvas id="map" width="900" height="560" aria-label="探索マップ"></canvas>
+      <p id="status">待機中</p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
