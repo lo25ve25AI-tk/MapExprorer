@@ -1,0 +1,114 @@
+:root {
+  color-scheme: dark;
+  --bg: #070b12;
+  --panel: rgba(10, 16, 28, 0.75);
+  --panel-border: rgba(130, 180, 255, 0.28);
+  --text: #eaf2ff;
+  --subtext: #9fb4d4;
+  --accent: #63d0ff;
+  --accent-2: #8bffcf;
+  --danger: #ff6b81;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(69, 133, 255, 0.25), transparent 60%),
+    radial-gradient(900px 700px at 90% -20%, rgba(0, 255, 190, 0.12), transparent 65%),
+    var(--bg);
+  min-height: 100vh;
+}
+
+main {
+  max-width: 1120px;
+  margin: 1.2rem auto 2rem;
+  padding: 0 1rem;
+}
+
+h1 {
+  margin: 0 0 0.4rem;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 24px rgba(99, 208, 255, 0.4);
+}
+
+p {
+  margin: 0;
+  color: var(--subtext);
+}
+
+.panel {
+  margin-top: 1rem;
+  padding: 0.9rem;
+  border-radius: 14px;
+  border: 1px solid var(--panel-border);
+  background: var(--panel);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+.controls,
+.day-controls {
+  display: flex;
+  gap: 0.55rem;
+  margin: 0.65rem 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+button,
+select {
+  color: var(--text);
+  border: 1px solid rgba(121, 177, 255, 0.35);
+  border-radius: 10px;
+  padding: 0.52rem 0.9rem;
+  background: linear-gradient(180deg, rgba(38, 58, 90, 0.95), rgba(24, 37, 61, 0.95));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(139, 255, 207, 0.6);
+  box-shadow: 0 0 0 1px rgba(139, 255, 207, 0.25), 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+#resetBtn {
+  border-color: rgba(255, 107, 129, 0.45);
+}
+
+#map {
+  width: 100%;
+  height: min(72vh, 740px);
+  margin-top: 0.9rem;
+  border: 1px solid rgba(123, 179, 255, 0.35);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(131, 194, 255, 0.15);
+}
+
+#status {
+  margin-top: 0.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.leaflet-container {
+  background: #02050a;
+  filter: saturate(1.1) contrast(1.05);
+}
+
+.leaflet-control-zoom a {
+  background: rgba(16, 26, 44, 0.9) !important;
+  color: #d5e6ff !important;
+  border-color: rgba(122, 178, 255, 0.35) !important;
+}
