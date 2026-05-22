@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map Explorer</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#070b12" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="panel">
+      <h1>Map Explorer（実地図連携版）</h1>
+      <p>
+        OpenStreetMap 上で、到達済みエリアだけが明るく表示されます。未到達領域は黒いフォグで覆われます。
+      </p>
+      <div class="controls">
+        <button id="startBtn">現在地トラッキング開始</button>
+        <button id="demoBtn">デモ軌跡を再生</button>
+        <button id="resetBtn">選択日の軌跡を削除</button>
+      </div>
+      <div class="day-controls">
+        <label for="daySelect">日付:</label>
+        <select id="daySelect" aria-label="日付ごとの軌跡切り替え"></select>
+        <button id="todayBtn">今日を表示</button>
+      </div>
+      <div id="offlineBanner" class="offline-banner" hidden>オフラインです</div>
+      <div id="map" aria-label="探索マップ"></div>
+      <p id="status">待機中</p>
+          </section>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js"></script>
+  </body>
+</html>
